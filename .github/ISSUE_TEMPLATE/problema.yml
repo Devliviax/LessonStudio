@@ -1,0 +1,74 @@
+name: Relatar problema na beta
+description: Informe uma falha de instalacao, permissao, previa, gravacao ou exportacao.
+title: "[Beta] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por testar. Nao envie senhas, dados pessoais ou gravacoes privadas.
+        A beta usa assinatura local e ainda pode ser bloqueada pelo macOS.
+  - type: input
+    id: version
+    attributes:
+      label: Versao do LessonStudio
+      placeholder: 0.1 beta 1
+    validations:
+      required: true
+  - type: input
+    id: mac
+    attributes:
+      label: Modelo do Mac e chip
+      placeholder: MacBook Air, M1
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: Versao do macOS
+      placeholder: Informe a versao em Sobre Este Mac
+    validations:
+      required: true
+  - type: dropdown
+    id: stage
+    attributes:
+      label: Quando acontece?
+      options:
+        - Instalacao ou abertura
+        - Permissoes
+        - Previa
+        - Gravacao
+        - Reproducao
+        - Exportacao
+        - Outro momento
+    validations:
+      required: true
+  - type: textarea
+    id: configuration
+    attributes:
+      label: Configuracao usada
+      description: Fonte, formato, layout, camera, microfone, efeitos e duracao do teste.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Passos para repetir
+      placeholder: |
+        1. Abri o aplicativo instalado em Aplicativos.
+        2. Selecionei...
+        3. Aconteceu...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Resultado esperado
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Resultado observado
+      description: Inclua a mensagem de erro, se houver, sem dados privados.
+    validations:
+      required: true
